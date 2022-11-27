@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "TechHack Plugin",
+  "version": "1.0",
+
+  "browser_action": {
+      "browser_style": true,
+      "default_title": "TecHack - Firefox Plugin",
+      "default_popup": "main.html"
+  },
+
+    "description": "Detects attacks and privacy violations in web client",
+
+    "permissions": [
+        "cookies",
+        "<all_urls>",
+        "tabs",
+        "storage",
+        "http://*/*",
+        "https://*/*"
+      ],
+  
+    "icons": {
+        "48": "icons/icon_48.png"      
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["main.js"]
+      }
+    ]
+  
+  }
+  

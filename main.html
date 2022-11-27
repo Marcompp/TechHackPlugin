@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css"/>
+    </head>
+    
+    <body>
+
+        <div>
+            <img src="icons/icon_96.png" class="logo"/>
+            <div class="rank-panel">
+                <h1 id="website-security-status">Loading</h1>
+                <h2 id="website-score"></h2>
+                <progress id="score-progress-bar" value="0" max="400" class="rank-progress"></progress>
+                <br></br>
+            </div>
+            
+            <div class="element-panel">
+                <h2 class="panel-title">
+                    Third Party Domains:
+                </h2>
+                <h3 id="size-third-party" style="margin-top:30px">No external links detected</h3>
+                <details class="third-party-information">
+                    <summary class="text-section-header">
+                        Show All Third Party Domains:
+                    </summary>
+                    <ul id="third-party-list"></ul>
+                </details>
+                <div class="risk-section" style="margin-top:-20px">
+                    <h3 class="risk-title">Risk:</h3>
+                    <progress value="0" max="100" id="links-status"></progress> 
+                </div>
+                <h3 id="threat-exists"style="color:green">No Hijacking or Hook Threats Found</h3>
+                <details class="threat-information">
+                    <summary class="text-section-header">
+                        Show All Suspicious Links:
+                    </summary>
+                    <ul id="threat-list"></ul>
+                </details>
+            </div>
+
+            <div class="element-panel">
+                <h2 class="panel-title">
+                    Cookies:
+                </h2>
+                <div class="risk-section">
+                    <h3 class="risk-title">Risk:</h3>
+                    <progress value="0" max="100" id="cookies-status"></progress> 
+                </div>
+                <div id="header-title-cookies" class="header-title"></div>
+                <h3 id="number-cookies"></h3>
+                <details class="cookies-information">
+                    <summary class="text-section-header" id="cookies-dropdown">
+                    Show all cookies:
+                    </summary>
+                    <ul id="cookie-list"></ul>
+                </details>
+                <h3 id="number-first-party-cookies"></h3>
+                <details class="first-party-cookies-information">
+                    <summary class="text-section-header" id="first-party-cookies-dropdown">
+                    Show all first-party cookies:
+                    </summary>
+                    <ul id="first-party-cookie-list"></ul>
+                </details>
+                <h3 id="number-third-party-cookies"></h3>
+                <details class="third-party-cookies-information">
+                    <summary class="text-section-header" id="third-party-cookies-dropdown">
+                    Show all third-party cookies:
+                    </summary>
+                    <ul id="third-party-cookie-list"></ul>
+                </details>
+            </div>
+
+            <div class="element-panel">
+                <h2 class="panel-title">
+                    Local Storage:
+                </h2>
+                <div class="risk-section">
+                    <h3 class="risk-title">Risk:</h3>
+                    <progress value="0" max="50" id="local-storage-status"></progress>  
+                </div>
+                <div id="header-title-local-storage" class="header-title"></div>
+                <h3 id="size-local-storage"></h3>
+                <details class="local-storage-information">
+                    <summary class="text-section-header" id="local-storage-dropdown">
+                    Show all data in local storage:
+                    </summary>
+                    <ul id="local-storage-list"></ul>
+                </details>
+            </div>
+
+            <div class="element-panel">
+                <h2 class="panel-title">
+                    Session Storage:
+                </h2>
+                <div class="risk-section">
+                    <h3 class="risk-title">Risk:</h3>
+                    <progress value="0" max="20" id="session-storage-status"></progress>  
+                </div>
+                <div id="header-title-session-storage" class="header-title"></div>
+                <h3 id="size-session-storage"></h3>
+                <details class="session-storage-information">
+                    <summary class="text-section-header" id="session-storage-dropdown">
+                        Show all data in session storage:
+                    </summary>
+                    <ul id="session-storage-list"></ul>
+                </details>
+            </div>
+
+            <div class="element-panel">
+                <h2 class="panel-title">
+                    Fingerprint:
+                </h2>
+                <div class="risk-section">
+                    <h3 class="risk-title">Risk:</h3>
+                    <progress value="0" max="100" id="fingerprint-status"></progress>  
+                </div>
+                <h3 id="fingerprint-exists" style="color:green">No one is fingerprinting you</h3>
+                <span id="fingerprint-id"></span>
+            </div>
+
+            <div class="element-panel">
+                <h2 class="panel-title">
+                    Privacy:
+                </h2>
+                <div class="risk-section", style="display:none">
+                    <h3 class="risk-title">Risk:</h3>
+                    <progress value="0" max="100" id="privacy-status"></progress>  
+                </div>
+                <h3 id="privacy-exists" style="color:#BE2C2C; margin-top:30px">No mentions of privacy found in source</h3>
+                <details class="privacy-information">
+                    <summary class="text-section-header" id="privacy-dropdown">
+                        Show Privacy Policies:
+                    </summary>
+                    <ul id="privacy-list"></ul>
+                </details>
+            </div>
+        </div>
+
+    <script src="cookies.js"></script>
+    <script src="links.js"></script>
+    <script src="storage.js"></script>
+    <script src="fingerprint.js"></script>
+    <script src="privacy.js"></script>
+    <script src="score.js"></script>
+ 
+    </body>
+
+</html>
